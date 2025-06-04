@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+body {
+  padding-inline: 40px;
+}
+@media screen and (max-width: 799px) {
+  body {
+    padding-inline: 80px;
+  }
+  p {
+    margin-block: 25px;
+    line-height: 1.5;
+  }
+}

@@ -5,6 +5,20 @@
   height: auto;
   width: 100%;
 }
+:root {
+  --fckfarve: #0f2db9;
+}
+
+h1 {
+  font-family: "STIX Two Text", serif;
+  font-style: normal;
+}
+
+p {
+  font-family: "Mada", sans-serif;
+  font-weight: bold;
+}
+/* Fonts */
 
 header {
   position: sticky;
