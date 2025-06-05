@@ -14,11 +14,13 @@ h1 {
   font-style: normal;
 }
 
+h2 {
+  color: var(--fckfarve);
+}
 p {
   font-family: "Mada", sans-serif;
   font-weight: bold;
 }
-/* Fonts */
 
 header {
   position: sticky;
