@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 799px) {
+  body {
+    padding-inline: 80px;
+  }
+  h1 {
+    text-align: center;
+    margin-block: 60px;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+  }
+  p {
+    margin-block: 25px;
+    line-height: 1.5;
+  }
+
+  .link4 {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .link4:hover {
+    color: black;
+  }
+  img {
+    margin-top: 10px;
+  }
+}
