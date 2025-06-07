@@ -14,6 +14,7 @@
   }
   h2 {
     text-align: center;
+    margin-top: 40px;
   }
   p {
     margin-block: 25px;
@@ -27,5 +28,8 @@
 
   .link3:hover {
     color: black;
+  }
+  img {
+    margin-top: 10px;
   }
 }

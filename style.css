@@ -79,6 +79,13 @@ nav {
   right: 20px;
 }
 
+.billede_container {
+  width: 50%;
+}
+main {
+  background-image: url(billeder/baggrund.svg);
+  background-size: cover;
+}
 @media screen and (max-width: 799px) {
   body {
     background-image: url(billeder/blaastreg_forside.svg);
