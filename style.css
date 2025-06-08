@@ -5,6 +5,19 @@
   height: auto;
   width: 100%;
 }
+
+.bold {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-image: url(billeder/Fodbold.svg);
+  border-radius: 50%;
+  pointer-events: none; /* så prikken ikke forstyrrer klik /
+  transform: translate(-50%, -50%); / centrer prikken på musen */
+}
+body {
+  padding-inline: 20px;
+}
 :root {
   --fckfarve: #0f2db9;
 }
@@ -23,7 +36,7 @@ p {
 }
 
 header {
-  position: sticky;
+  position: relative;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -57,6 +70,8 @@ nav {
   transition: color 0.3s;
   text-align: end;
 }
+
+/* Burger */
 .burger {
   width: 30px;
   height: 20px;
@@ -79,13 +94,76 @@ nav {
   right: 20px;
 }
 
+/* MAIN */
+.h1_tekst {
+  margin-top: 160px;
+}
+
+.about-container {
+  position: relative;
+
+  margin: 3rem;
+}
+
+.red-box {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background-color: blue;
+  z-index: 0; /* bagved teksten */
+}
+
+.about-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  z-index: 1; /* så min h1 kommer foran boksen */
+}
+.grid_container {
+  display: flex;
+}
 .billede_container {
-  width: 50%;
+  width: 80%;
+  align-items: end;
 }
 main {
-  background-image: url(billeder/baggrund.svg);
+  /*background-image: url(billeder/baggrund.svg);*/
   background-size: cover;
 }
+.knap {
+  position: absolute;
+  margin-bottom: 20px;
+}
+.knap a {
+  text-decoration: none;
+  background-color: blue;
+  font-size: 25px;
+  line-height: 1.5;
+  color: white;
+  fill: blue;
+  font-size: 2rem;
+  padding: 10px 10px;
+  border-radius: 7.29px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: inline-block; /* Sørger for at padding virker */
+
+  width: 200px;
+  max-width: 90%; /* Så den ikke bliver for bred på små skærme */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-left: 326px;
+}
+.knap a:hover {
+  background-color: red;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+footer {
+  margin-top: 100px;
+}
+
 @media screen and (max-width: 799px) {
   body {
     background-image: url(billeder/blaastreg_forside.svg);
@@ -119,8 +197,8 @@ main {
 
   nav.active .menu {
     display: block;
-    background-color: var(--header_footer_green);
     position: absolute;
+    background-color: white;
     top: 70px;
     left: 0;
     width: 100%;
@@ -175,5 +253,8 @@ main {
     background-color: red;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+  }
+  footer {
+    margin-top: 100px;
   }
 }

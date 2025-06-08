@@ -7,6 +7,28 @@
 body {
   padding-inline: 40px;
 }
+.port {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  left: 30%;
+  top: 30%;
+}
+
+.negon {
+  display: flex;
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 50%;
+}
+.zanzi {
+  display: flex;
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 24%;
+}
 @media screen and (max-width: 799px) {
   body {
     padding-inline: 80px;
@@ -14,5 +36,8 @@ body {
   p {
     margin-block: 25px;
     line-height: 1.5;
+  }
+  .block {
+    display: block;
   }
 }
