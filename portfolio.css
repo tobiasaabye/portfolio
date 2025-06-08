@@ -23,34 +23,32 @@ body {
   position: relative;
   z-index: 1;
 }
-
-.header h1::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 0;
-  height: 60%;
-  width: 40px;
-  background-color: #0033cc;
-  z-index: -1;
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .tema-box {
-  border: 2px solid #0033cc;
-  background-color: #f0f0f0;
-  padding: 15px;
-  margin: 20px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  text-decoration: none;
+  display: block; /* gør hele området klikbart */
+  background-color: #eae8e8;
+  color: var(--fckfarve);
   text-align: center;
-  gap: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px; /* de runde hjørner */
+  text-decoration: none; /* fjerner standard link-underline */
+  transition: transform 0.3s, box-shadow 0.3s; /* den bløde overgang for hover-effekter */
 }
 
-.tema-box span:first-child {
-  font-weight: bold;
-  color: #0033cc;
+.tema-box:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skaber skygge ved hover */
+}
+
+.tema-box:hover ul {
+  flex-direction: column; /* Ændrer rækkefølgen af elementerne */
+  gap: 20px; /* Mindre mellemrum på mobil */
+  color: blue;
 }
 
 @media screen and (max-width: 799px) {

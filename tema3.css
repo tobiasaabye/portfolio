@@ -3,7 +3,40 @@
   margin: 0;
   padding: 0;
 }
+h1 {
+  text-align: center;
+  margin-block: 60px;
+}
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 80px;
+}
 
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 80px;
+}
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+p {
+  margin-block: 25px;
+  line-height: 1.5;
+}
+
+.link2 {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link2:hover {
+  color: black;
+}
 @media screen and (max-width: 799px) {
   body {
     padding-inline: 80px;
@@ -31,5 +64,8 @@
   }
   img {
     margin-top: 10px;
+  }
+  .lort {
+    display: block;
   }
 }

@@ -6,6 +6,7 @@
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 h1 {
   text-align: center;
@@ -20,12 +21,12 @@ p {
   line-height: 1.5;
 }
 
-.link2 {
+.link1 {
   font-weight: bold;
   text-decoration: none;
 }
 
-.link2:hover {
+.link1:hover {
   color: black;
 }
 img {
