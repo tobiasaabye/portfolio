@@ -3,31 +3,55 @@
   padding: 0;
   height: auto;
 }
-
-body {
-  padding-inline: 40px;
-}
-.port {
-  display: flex;
-  position: absolute;
-  width: 50%;
-  left: 30%;
-  top: 30%;
+.grid_1-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: start;
 }
 
-.negon {
-  display: flex;
-  position: absolute;
-  width: 30%;
-  right: 0;
-  top: 50%;
+.tekst h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 100px;
 }
-.zanzi {
-  display: flex;
-  position: absolute;
-  width: 30%;
-  right: 0;
-  top: 24%;
+
+.tekst .blå {
+  background-color: #0033cc;
+  padding: 0.2em 1.1em;
+}
+
+.billeder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border: 4px solid #0033cc; /* blå kant */
+  padding: 1rem;
+}
+
+.billeder:hover {
+  transform: scale(1.1); /* Gør billedet større */
+  transition: transform 0.3s ease-out; /* Giver en blød animation når du hover*/
+}
+.stor-billede {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  object-fit: cover;
+}
+
+.små-billeder {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.små-billeder img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 @media screen and (max-width: 799px) {
   body {
@@ -39,5 +63,21 @@ body {
   }
   .block {
     display: block;
+  }
+  .billeder {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: start;
+  }
+  .billeder:hover {
+    transform: none;
   }
 }

@@ -6,6 +6,31 @@
   width: 100%;
 }
 
+.beach-container {
+  height: 300px; /* height: 300px; → Boksen er 300px høj */
+  position: relative; /*  position: relative; → Gør det muligt for absolute-placerede elementer (som bolden) at forholde sig til denne container.*/
+}
+
+.beach {
+  width: 80px; /* Hvor bred bolden er */
+  position: absolute; /* gør det muligt at placere container */
+  bottom: 0; /* Starter i bunden af skærmen */
+  left: 0; /* starter ude i venstre side */
+  animation: hop 1.5s infinite ease-in-out; /* hvert hop tager 1.5 sekund, animationen hop bruges og */
+}
+
+@keyframes hop {
+  0% {
+    transform: translateY(0); /*bolden står stille */
+  }
+  50% {
+    transform: translateY(-150px); /* bolden er halvejs og er hoppet 150px opad */
+  }
+  100% {
+    transform: translateY(0); /* slut bolden lander */
+  }
+}
+
 .bold {
   position: fixed;
   width: 40px;
