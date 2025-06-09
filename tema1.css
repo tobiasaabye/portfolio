@@ -3,6 +3,17 @@
   margin: 0;
   padding: 0;
 }
+img {
+  border: 2px solid black; /* eller en anden farve og tykkelse */
+  padding: 5px; /* valgfrit: lidt luft mellem billede og kant */
+  border-radius: 4px;
+  border-color: var(--fckfarve);
+}
+
+img:hover {
+  transform: scale(1.1); /* Gør billedet større */
+  transition: transform 0.3s ease; /* Giver en blød animation */
+}
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,7 +38,7 @@ p {
 }
 
 .link1:hover {
-  color: black;
+  color: red;
 }
 img {
   margin-top: 10px;
@@ -63,5 +74,11 @@ img {
   }
   img {
     margin-top: 10px;
+  }
+  .grid_1-1 {
+    grid-template-columns: 1fr;
+  }
+  img:hover {
+    transform: none;
   }
 }
