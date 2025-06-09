@@ -6,6 +6,17 @@
   width: 100%;
 }
 
+.tekstboks.infohvid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 3px solid var(--fckfarve);
+  box-shadow: 0 4px 8px rgba(0, 85, 170, 0.1);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
 .beach-container {
   height: 300px; /* height: 300px; → Boksen er 300px høj */
   position: relative; /*  position: relative; → Gør det muligt for absolute-placerede elementer (som bolden) at forholde sig til denne container.*/
@@ -19,6 +30,7 @@
   animation: hop 1.5s infinite ease-in-out; /* hvert hop tager 1.5 sekund, animationen hop bruges og */
 }
 
+/* Hop animation til min beachvolley */
 @keyframes hop {
   0% {
     transform: translateY(0); /*bolden står stille */
@@ -31,6 +43,7 @@
   }
 }
 
+/* Bold mus */
 .bold {
   position: fixed;
   width: 40px;
@@ -43,6 +56,8 @@
 body {
   padding-inline: 20px;
 }
+
+/* Variabel */
 :root {
   --fckfarve: #0f2db9;
 }
@@ -58,8 +73,10 @@ h2 {
 p {
   font-family: "Mada", sans-serif;
   font-weight: bold;
+  line-height: 30px;
 }
 
+/* Menu */
 header {
   position: relative;
   top: 0;
@@ -70,6 +87,13 @@ header {
   background-color: var(--header_footer_green);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   z-index: 500;
+}
+.header_hover {
+  font-weight: bold;
+}
+.header_hover:hover {
+  color: red;
+  font-weight: bold;
 }
 nav {
   display: flex;
@@ -120,78 +144,80 @@ nav {
 }
 
 /* MAIN */
-.h1_tekst {
-  margin-top: 160px;
+
+body {
+  background-image: url(billeder/baggrund.svg);
+}
+.forside-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; /* afstanden mellem de to koloner */
+  padding: 2rem 4rem;
+  align-items: center; /* Får alt indhold i kolonerne til at stå i midten */
+  background-color: white;
 }
 
-.about-container {
-  position: relative;
-
-  margin: 3rem;
-}
-
-.red-box {
-  position: absolute;
-  width: 80px;
-  height: 60px;
-  background-color: blue;
-  z-index: 0; /* bagved teksten */
-}
-
-.about-container h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: black;
-  position: relative;
-  z-index: 1; /* så min h1 kommer foran boksen */
-}
-.grid_container {
+.venstre {
   display: flex;
+  flex-direction: column; /* vises lodret i kolonerne */
+  justify-content: center; /* centrere det hele */
 }
-.billede_container {
-  width: 80%;
-  align-items: end;
-}
-main {
-  /*background-image: url(billeder/baggrund.svg);*/
-  background-size: cover;
-}
-.knap {
-  position: absolute;
-  margin-bottom: 20px;
-}
-.knap a {
-  text-decoration: none;
-  background-color: blue;
-  font-size: 25px;
-  line-height: 1.5;
-  color: white;
-  fill: blue;
-  font-size: 2rem;
-  padding: 10px 10px;
-  border-radius: 7.29px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  display: inline-block; /* Sørger for at padding virker */
 
-  width: 200px;
-  max-width: 90%; /* Så den ikke bliver for bred på små skærme */
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 100px;
-  margin-left: 326px;
+.titel h1 {
+  font-size: 3rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 700;
 }
-.knap a:hover {
+
+.blåbaggrund {
+  background-color: var(--fckfarve);
+  color: black;
+  padding: 0.1em 0.4em;
+  margin-left: -60px;
+  height: 5px;
+}
+
+.navn {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: var(--fckfarve);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.introtekst p {
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cta-knap {
+  background-color: #0033cc;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 195px;
+  margin-top: 50px;
+}
+
+.cta-knap:hover {
   background-color: red;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
 }
-footer {
-  margin-top: 100px;
+
+.højre img.portræt {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 15px;
 }
 
 @media screen and (max-width: 799px) {
   body {
-    background-image: url(billeder/blaastreg_forside.svg);
+    background-image: url(billeder/baggrund.svg);
     height: 100%;
     position: sticky;
     background-size: cover;
@@ -199,6 +225,7 @@ footer {
     background-position: bottom 55px right 1px;
   }
 
+  /* Burger menu */
   .menu {
     display: none;
   }
@@ -238,48 +265,73 @@ footer {
   nav.active .menu a {
     font-size: 24px;
   }
-
-  .billede_container img {
-    max-width: 500px; /*billede størrelse*/
-  }
-
-  .text p {
-    padding: 50px;
-    font-size: 20px;
-    line-height: 1.5;
+  .forside-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
     text-align: center;
   }
 
-  /** knap forside*/
-  .knap {
-    position: absolute;
+  .venstre {
+    align-items: center;
   }
-  .knap a {
-    text-decoration: none;
-    background-color: blue;
-    font-size: 25px;
-    line-height: 1.5;
+
+  .titel h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .blåbaggrund {
+    background-color: #0033cc;
     color: white;
-    fill: blue;
-    font-size: 2rem;
-    padding: 10px 10px;
-    border-radius: 7.29px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    display: inline-block; /* Sørger for at padding virker */
+    padding: 0.2rem 0.4rem;
+    display: inline-block;
+  }
 
-    width: 200px;
-    max-width: 90%; /* Så den ikke bliver for bred på små skærme */
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    margin-left: 326px;
+  .navn {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #0033cc;
+    text-shadow: none;
   }
-  .knap a:hover {
-    background-color: red;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+
+  .introtekst {
+    margin-top: 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
   }
-  footer {
-    margin-top: 100px;
+
+  .cta-knap {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #3b22c4;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  .højre {
+    margin-top: 2rem;
+  }
+
+  .portræt {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .cta-knap {
+    background-color: var(--fckfarve);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center; /* Teksten bliver centreret i boksen */
+    width: max-content; /* Knappen bliver så bred som indholdet fylder */
+    margin: 0 auto; /* centrere knappen i forhold til containeren */
   }
 }

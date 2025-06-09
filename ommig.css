@@ -30,10 +30,6 @@
   padding: 1rem;
 }
 
-.billeder:hover {
-  transform: scale(1.1); /* Gør billedet større */
-  transition: transform 0.3s ease-out; /* Giver en blød animation når du hover*/
-}
 .stor-billede {
   width: 100%;
   height: 100%;
