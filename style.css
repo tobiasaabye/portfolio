@@ -80,11 +80,9 @@ p {
 header {
   position: relative;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--fckfarve);
+  align-items: start;
   padding: 15px;
-  background-color: var(--header_footer_green);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   z-index: 500;
 }
@@ -114,7 +112,7 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
@@ -148,6 +146,8 @@ nav {
 body {
   background-image: url(billeder/baggrund.svg);
 }
+
+/* Forside */
 .forside-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -191,8 +191,9 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Knap */
 .cta-knap {
-  background-color: #0033cc;
+  background-color: var(--fckfarve);
   color: white;
   padding: 0.8rem 2rem;
   border-radius: 8px;
@@ -251,7 +252,7 @@ body {
     display: block;
     position: absolute;
     background-color: white;
-    top: 70px;
+    top: 30px;
     left: 0;
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -264,6 +265,7 @@ body {
 
   nav.active .menu a {
     font-size: 24px;
+    color: black;
   }
   .forside-grid {
     grid-template-columns: 1fr;
@@ -281,8 +283,8 @@ body {
   }
 
   .blåbaggrund {
-    background-color: #0033cc;
-    color: white;
+    background-color: var(--fckfarve);
+
     padding: 0.2rem 0.4rem;
     display: inline-block;
   }
@@ -333,5 +335,11 @@ body {
     text-align: center; /* Teksten bliver centreret i boksen */
     width: max-content; /* Knappen bliver så bred som indholdet fylder */
     margin: 0 auto; /* centrere knappen i forhold til containeren */
+  }
+  .blåbaggrund {
+    display: none;
+  }
+  header {
+    background-color: none;
   }
 }
